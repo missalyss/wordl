@@ -1,7 +1,7 @@
 
 .winner {
   background-image: url('../../public/fireworks.gif');
-  background-size: contain;
+  background-size: cover;
 }
 
 .winSpin {
