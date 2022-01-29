@@ -1,0 +1,57 @@
+.row {
+  min-height: 60px;
+  min-width: 330px;
+}
+
+.text-field {
+  letter-spacing: 50px;
+  height: 60px;
+  border-bottom: 2px black solid;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  font-size: 22px;
+  text-transform: uppercase;
+  caret-color: red;
+}
+
+input:focus{
+    outline: none;
+}
+
+
+.letter {
+  height: 60px;
+  width: 70px;
+  border: 2px solid black;
+}
+
+.winner {
+  background-image: url('../../public/fireworks.gif');
+  background-size: contain;
+}
+
+.winSpin {
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.winMarquee {
+  text-transform: uppercase;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 10px;
+  font-size: 50px;
+  font-weight: 900;
+  font-stretch: ultra-expanded;
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
