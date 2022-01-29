@@ -5,8 +5,6 @@ export const pickRandomAnswer = ({answerArr}) => {
 
 export const checkGuess = ({guess, answer}) => {
   const answerArr = answer?.toUpperCase()?.split('');
-  console.log('answerArrindex: ', answerArr);
-
   const guessArr = []
   guess.split("")?.forEach((gLetter, gi) => {
     const gObj = { letter: gLetter, color: 'white' };
@@ -26,9 +24,6 @@ export const checkGuess = ({guess, answer}) => {
 };
 
 export const gotWord = ({guessArr = []}) => {
-  const result = guessArr.length && guessArr.every(guess => {
-    console.log('!!!!!!!!!!!!!!guess.colo: ', guess.color);
+  return guessArr.length && guessArr.every(guess => {
     return guess.color === 'green'});
-  console.log('result: ', result);
-  return result;
 }
