@@ -7,13 +7,13 @@ export const checkGuess = ({guess, answer}) => {
   const answerArr = answer?.toUpperCase()?.split('');
   const guessArr = []
   guess.split("")?.forEach((gLetter, gi) => {
-    const gObj = { letter: gLetter, color: 'white' };
+    const gObj = { letter: gLetter, color: '' };
     if (answerArr?.includes(gLetter)) {
-      gObj.color = 'yellow';
+      gObj.color = 'bg-yellow';
     }
     answerArr?.forEach((aLetter, ai) => {
       if (aLetter === gLetter && ai === gi) {
-        gObj.color = 'green';
+        gObj.color = 'bg-green';
         return;
       }
       return;
@@ -25,5 +25,5 @@ export const checkGuess = ({guess, answer}) => {
 
 export const gotWord = ({guessArr = []}) => {
   return guessArr.length && guessArr.every(guess => {
-    return guess.color === 'green'});
+    return guess.color === 'bg-green'});
 }

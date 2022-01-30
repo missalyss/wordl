@@ -6,7 +6,7 @@ import '../styles/winner.css'
 import { checkGuess, gotWord, pickRandomAnswer } from '../util/check-guess';
 import Counter from './counter';
 import Input from './input';
-const answerArr = ['pants', 'grind', 'hotel', 'fiend', 'ought', 'clamp', 'tried', 'trial', 'farse', 'reads', 'stone', 'cried', 'close', 'nasty', 'stand', 'dance', 'punch']
+const answerArr = ['pants', 'grind', 'hotel', 'fiend', 'ought', 'clamp', 'tried', 'trial', 'farse', 'reads', 'stone', 'cried', 'close', 'nasty', 'stand', 'dance', 'group', 'stamp', 'punch']
 const answer = pickRandomAnswer({answerArr})
 
 const Game = () => {
@@ -24,23 +24,24 @@ const Game = () => {
   }, [guessArr])
 
   return (
-    <div className={`flex flex-column height-100 align-center p3 ${isWinner ? 'winner' : ''}`}>
+    <div className={`flex flex-column align-center justify-between content p3 ${isWinner && 'winner'}`}>
       <main className="main">
         <h1 className="outline">
           wordl
         </h1>
-        <Counter count={count} />
         <div className="flex flex-column">
+        <Counter count={count} />
           <Row guess={guessArr} isWinner={isWinner}/>
           {/* <Row /> */}
           {/* <Row /> */}
           {/* <Row /> */}
           {/* <Row /> */}
 <Input setCounter={setCounter} count={count} setGuess={setGuess} />
+{isWinner && <button onClick={() => window.location.reload()}>New Game</button>}
         </div>
       </main>
         {isWinner &&
-        <marquee className="winMarquee mt7">You did it!!! Amazing!!! The smartest person in the world!!!</marquee>
+        <marquee scrollamount="30" className="winMarquee mt7">You did it! Wow! Amazing! The smartest person in the world! Winner!</marquee>
         }
 
       <footer className="outline">

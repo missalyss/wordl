@@ -7,7 +7,7 @@ const Row = ({guess = [], isWinner }) => {
     <div className={`flex flex-row row m4`} >
       {guess.map((guessObj, i) => {
           return (
-          <span key={i} className={`flex justify-center align-center ${guessObj?.color} ${isWinner ? 'winSpin' : null} m2 p3 letter`}>{guessObj?.letter}</span>
+          <span key={i} className={`flex justify-center align-center bg-mute ${guessObj?.color} ${isWinner ? 'winSpin' : null} m1 justify-between p3 letter`}>{guessObj?.letter}</span>
         )
       })}
     </div>

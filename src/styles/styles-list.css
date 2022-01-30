@@ -1,71 +1,3 @@
-:root {
-  --soft-black: #2d2d2d;
-  --blue: #5a6a91;
-  --dark-blue: #475270;
-  --cream: #f5f5f5;
-  --red: #932A24;
-}
-
-.green {
-  background-color: #4ABD24;
-}
-
-.yellow {
-  background-color: #FFDC76;
-}
-
-.white {
-  background-color: var(--cream);
-}
-
-.outline {
-  -webkit-text-fill-color: black;
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: white;
-  font-weight: 900;
-
-}
-  .App {
-  text-align: center;
-  background: var(--blue);
-}
-
-.text-soft-black {
-  color: var(--soft-black);
-}
-
-.bg-soft-black {
-  background-color: var(--soft-black);
-}
-
-.text-blue {
-  color: var(--blue);
-}
-.bg-blue {
-  background-color: var(--blue)
-}
-
-.text-red {
-  color: var(--red);
-}
-.bg-red {
-  background-color: var(--red)
-}
-
-.text-dark-blue {
-  color: var(--dark-blue);
-}
-.bg-dark-blue {
-  background-color: var(--dark-blue);
-}
-
-.text-cream {
-  color: var(--cream);
-}
-.bg-cream {
-  background-color: var(--cream);
-}
-
 .md-font {
   font-size: 20px;
 }
@@ -126,8 +58,12 @@
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .height-100 {
-  height: 100%;
+  height: 100vh;
 }
 
 .relative {
@@ -139,7 +75,15 @@
 }
 
 .main {
-  min-height: 80vh;
+  /* min-height: 80vh; */
+  padding: 16px;
+}
+
+.border {
+  border-width: 1px;
+  border-color: var(--red);
+  border-style: groove;
+  background-color: var(--cream);
 }
 
 .grid {
