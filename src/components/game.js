@@ -6,7 +6,7 @@ import '../styles/winner.css'
 import { checkGuess, gotWord, pickRandomAnswer } from '../util/check-guess';
 import Counter from './counter';
 import Input from './input';
-const answerArr = ['pants', 'grind', 'hotel', 'fiend', 'ought', 'clamp', 'tried', 'trial', 'farse', 'reads', 'stone', 'cried', 'close', 'nasty', 'stand', 'dance', 'group', 'stamp', 'punch']
+const answerArr = ['pants', 'grind', 'hotel', 'fiend', 'ought', 'clamp', 'cramp', 'stump', 'coral', 'track', 'tried', 'trial', 'farse', 'reads', 'stone', 'cried', 'close', 'nasty', 'stand', 'dance', 'group', 'stamp', 'punch', 'gripe', 'drunk', 'thine', 'phial', 'erase', 'arise', 'enter', 'brain', 'quick', 'brine', 'spire']
 const answer = pickRandomAnswer({answerArr})
 
 const Game = () => {
